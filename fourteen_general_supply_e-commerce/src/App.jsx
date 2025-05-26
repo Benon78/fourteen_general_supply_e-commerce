@@ -10,13 +10,14 @@ import About from './Pages/About';
 import NotFoundPage from './Pages/NotFoundPage.jsx';
 import ProductDetail from './Components/ProductDetail/ProductDetail';
 import ProductCategory from './Pages/ProductCategory';
+import Footer from './Components/Footer/Footer.jsx';
 function App() {
  
   return (
   <BrowserRouter>
     <NavBar/>
     <Routes>
-      <Route path='/shop' element={<Shop/>}/>
+      <Route path='/' element={<Shop/>}/>
       <Route path='/products' element={<Product/>}>
         <Route path='laptops' element={<ProductCategory category='laptops'/>}/>
         <Route path='tablets' element={<ProductCategory category='tablets'/>}/>
@@ -32,6 +33,7 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
+    <Footer/>
   </BrowserRouter>
   )
 }

@@ -1,0 +1,113 @@
+.product{
+    background: #eeecec;
+    box-sizing: border-box;
+    padding: 30px 20px;
+}
+
+.product-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.product-nav{
+    background: #fff;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    gap: 20px;
+    padding: 20px;
+    max-height: 50vh;
+}
+
+.product-nav h3{
+    font-size: 1.5rem;
+    color: rgb(210, 102, 25);
+    font-weight: 700;
+}
+
+.product-nav ul{
+    list-style: none;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-list{
+    background: #fff;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.9);
+    border-radius: 5px;
+    width: 85%;
+    padding: 10px;
+}
+
+
+.category-header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.category-header h3{
+    font-size: 1.9rem;
+    color: rgb(210, 102, 25);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.category-sort{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.sort-items-count, .sort-items, .view{
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.sort-items .select {
+  font-size: 1rem; /* Consistent size */
+  font-weight: 500; /* Keep same weight */
+  cursor: pointer;
+  padding: 8px 12px; /* Slightly larger padding for better look and feel */
+  border: 1px solid #d2691e; /* Richer border color (chocolate-like) */
+  border-radius: 8px; /* More rounded corners for a modern look */
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition on hover/focus */
+}
+
+/* Add hover and focus effects for better UX */
+.sort-items .select:hover{
+  border-color: #a0522d; /* Darker shade on hover/focus */
+  box-shadow: 0 0 8px rgba(210, 105, 30, 0.3); /* Subtle glow effect */
+}
+
+.view{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.view-icon{
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #d2691e;
+}
+
+.product-category hr{
+    height: 3px;
+    border-radius: 10px;
+    background: #252525;
+}

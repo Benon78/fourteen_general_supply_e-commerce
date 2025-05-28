@@ -1,0 +1,39 @@
+.support{
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.support-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 370px;
+}
+
+.suport-icon{
+    font-size: 2rem;
+    color: rgba(223, 123, 83, 0.92);
+}
+
+.support-container:nth-child(4) .suport-icon{
+    font-size: 2.7rem;
+}
+.support-container:nth-child(3) .suport-icon{
+    font-size: 2.7rem;
+}
+
+.support-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.support-content h4{
+        font-size: 1.2rem;
+        font-size: 500;
+        color: rgb(210, 62, 62);
+}
+.support-content p{
+    font-size: 0.9rem;
+}

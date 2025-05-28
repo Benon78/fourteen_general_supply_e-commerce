@@ -4,7 +4,6 @@ import Item from '../Item/Item'
 
 const Offers = () => {
     const offersProduct = all_products.filter((item) => item.category === 'New Laptops').slice(0,4)
-    console.log(offersProduct)
   return (
     <div className='offers'>
         <div className="offers-left">

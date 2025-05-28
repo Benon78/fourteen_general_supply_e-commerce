@@ -930,7 +930,7 @@ export const all_products = [
     type: "storage",
     oldPrice: 80000,
     newPrice: 75000,
-    category: "Accessory",
+    category: "accessories",
     description: {
       ProductModel: "DHI-SSD-C800AS256G",
       Capacity: " 256 GB",
@@ -953,7 +953,7 @@ export const all_products = [
     type: "storage",
     oldPrice: 80000,
     newPrice: 75000,
-    category: "Accessory",
+    category: "accessories",
     description: {
       ProductModel: "DHI-SSD-C800AS256G",
       Capacity: " 256 GB",

@@ -1,8 +1,13 @@
-import React from 'react'
+
 import './ProductDetail.css'
+import BreadCrum from '../BreadCrum/BreadCrum'
+import { useParams } from 'react-router-dom'
 const ProductDetail = () => {
+  const { productId } = useParams()
   return (
-    <div>ProductDetail</div>
+    <div>
+      <BreadCrum location={productId}/>
+    </div>
   )
 }
 

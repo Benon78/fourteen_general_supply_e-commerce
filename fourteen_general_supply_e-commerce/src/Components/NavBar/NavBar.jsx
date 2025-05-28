@@ -13,11 +13,11 @@ const NavBar = () => {
   return (
     <div className="navBar">
       <div className="nav-logo">
-        <Link to='/shop'><img src={logo_img} alt="logo" /></Link>
+        <Link to='/'><img src={logo_img} alt="logo" /></Link>
       </div>
       <ul className="nav-links">
         <li>
-          <NavLink to="shop" style={({isActive}) => (isActive ? styled : null)}>
+          <NavLink to="/" style={({isActive}) => (isActive ? styled : null)}>
             HOME
           </NavLink>
         </li>

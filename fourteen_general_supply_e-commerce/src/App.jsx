@@ -10,28 +10,26 @@ import About from './Pages/About';
 import NotFoundPage from './Pages/NotFoundPage.jsx';
 import ProductDetail from './Components/ProductDetail/ProductDetail';
 import ProductCategory from './Pages/ProductCategory';
+import Footer from './Components/Footer/Footer.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 function App() {
  
   return (
   <BrowserRouter>
     <NavBar/>
     <Routes>
-      <Route path='/shop' element={<Shop/>}/>
-      <Route path='/products' element={<Product/>}>
-        <Route path='laptops' element={<ProductCategory category='laptops'/>}/>
-        <Route path='tablets' element={<ProductCategory category='tablets'/>}/>
-        <Route path='desktops' element={<ProductCategory category='desktops'/>}/>
-        <Route path='mobile-phones' element={<ProductCategory category='mobile-phones'/>}/>
-        <Route path='accessories' element={<ProductCategory category='accessories'/>}/>
-        <Route path='printers' element={<ProductCategory category='printers'/>}/>
+      <Route path='/' errorElement={<ErrorPage/>} element={<Shop/>}/>
+      <Route path='/products' errorElement={<ErrorPage/>} element={<Product/>}>
+        <Route path=':category' errorElement={<ErrorPage/>} element={<ProductCategory/>}/>
       </Route>
-      <Route path='/products/:productId' element={<ProductDetail/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/login' element={<LoginSignup/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='/about' element={<About/>}/>
+      <Route path='/product/:productId' errorElement={<ErrorPage/>} element={<ProductDetail/>}/>
+      <Route path='/contact' errorElement={<ErrorPage/>} element={<Contact/>}/>
+      <Route path='/login' errorElement={<ErrorPage/>} element={<LoginSignup/>}/>
+      <Route path='/cart' errorElement={<ErrorPage/>} element={<Cart/>}/>
+      <Route path='/about' errorElement={<ErrorPage/>} element={<About/>}/>
       <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
+    <Footer/>
   </BrowserRouter>
   )
 }

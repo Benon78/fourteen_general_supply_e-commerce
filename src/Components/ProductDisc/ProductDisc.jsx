@@ -11,8 +11,14 @@ import { shopContext } from "../Context/ShopContext";
 
 const ProductDisc = (props) => {
   const { description, image, name, newPrice, subImages, id } = props.product;
-  const { addToCart} = useContext(shopContext)
+  const { addToCart, getRecentViewed} = useContext(shopContext)
   const [mainImg, setMainImg] = useState(image)
+
+  const handleClick = (productId) =>{
+          addToCart(productId)
+          getRecentViewed(productId)
+  }
+
     useEffect(() => {
     setMainImg(image);
   }, [image]);
@@ -61,7 +67,7 @@ const ProductDisc = (props) => {
           <div className="prices">
             <p><strong>Price:</strong> <span>{newPrice}TZS</span></p>
           </div>
-          <button onClick={()=>addToCart(id)}>ADD TO CART</button>
+          <button onClick={()=>handleClick(id)}>ADD TO CART</button>
         </div>
       </div>
     </div>

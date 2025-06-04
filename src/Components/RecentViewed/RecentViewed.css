@@ -1,69 +1,70 @@
-.related{
+.recent{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 70vh;
+    height: 60vh;
+    margin-top: 40px;
 }
 
-.related h1{
+.recent h1{
     color: #171717;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
     margin-bottom: 5px;
-    /* align-self: flex-start; */
+    align-self: flex-start;
 }
 
-.related hr{
+.recent hr{
     width: 200px;
     height: 3px;
     border-radius: 10px;
-    /* align-self: flex-start; */
     background: #252525;
+    align-self: flex-start;
 }
 
-.related-item{
-    margin-top: 50px;
+.recent-item{
+    margin-top: 30px;
     display: flex;
     gap: 50px;
    
 }
-.related-item .item {
+.recent-item .item {
      background: white;
 }
 
 @media(max-width:1280px){
-     .related{
-        height: 70vh;
+     .recent{
+        height: 60vh;
      }
 
-     .related h1{
+     .recent h1{
         font-size: 40px;
      }
-     .related hr{
+     .recent hr{
         width: 160px;
         height: 4px;
      }
-    .related-item{
+    .recent-item{
     margin-top: 30px;
     gap: 20px;
     }
 
 }
 @media(max-width:1024px){
-     .related{
+     .recent{
         height: 60vh;
      }
 
-     .related h1{
+     .recent h1{
         font-size: 30px;
      }
-     .related hr{
+     .recent hr{
         width: 120px;
         height: 3px;
      }
-    .related-item{
+    .recent-item{
         margin-top: 20px;
         gap: 15px;
     }
@@ -71,28 +72,28 @@
 }
 
 @media(max-width:800px){
-     .related{
+     .recent{
         height: 50vh;
         gap: 8px;
      }
 
-     .related h1{
+     .recent h1{
         font-size: 20px;
      }
-     .related hr{
+     .recent hr{
         width: 100px;
      }
-    .related-item{
+    .recent-item{
         gap: 5px;
     }
 
 }
 @media(max-width:500px){
-     .related{
+     .recent{
         height: 90vh;
      }
 
-    .related-item{
+    .recent-item{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -101,7 +102,7 @@
 }
 
 @media(max-width:400px){
-    .related-item{
+    .recent-item{
         gap: 10px;
     }
 }

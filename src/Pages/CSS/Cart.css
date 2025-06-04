@@ -1,0 +1,19 @@
+.cart{
+    background: #eeecec;
+    box-sizing: border-box;
+    padding: 30px 20px;
+}
+
+.cart-contents{
+    width: 85%;
+    margin: auto;
+}
+
+.cart-contents h1{
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: rgb(189, 97, 32);
+}

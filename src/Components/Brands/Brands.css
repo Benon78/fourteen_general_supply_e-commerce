@@ -1,0 +1,15 @@
+.brands{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px;
+    height: 40vh;
+}
+
+.brand-icon{
+    border: 1px solid;
+    padding: 10px;
+    height: 126px;
+}

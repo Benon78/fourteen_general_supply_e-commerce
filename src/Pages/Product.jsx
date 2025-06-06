@@ -3,7 +3,7 @@ import BreadCrum from "../Components/BreadCrum/BreadCrum";
 import "./CSS/Product.css";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { MdViewModule, MdViewList } from "react-icons/md";
-import { getFilteredProduct } from "../Components/utils/Helper.js";
+import { getFilteredProduct, usePageTittle } from "../Components/utils/Helper.js";
 import Item from "../Components/Item/Item.jsx";
 import Support from "../Components/Support/Support.jsx";
 import Loading from "../Components/Loading/Loading.jsx";
@@ -27,7 +27,7 @@ const Product = () => {
     async () => await getFilteredProduct(location),
     [location]
   );
-
+  usePageTittle(`${location} - Fourteen General Supply`)
   const renderProductsElements = (products) => {
     return location === "all products" ? (
       <div className="product-category-item">

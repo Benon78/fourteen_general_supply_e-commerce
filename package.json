@@ -2,7 +2,7 @@
   "name": "fourteen_general_supply_e-commerce",
   "description": "Fourteen General Supply provides quality hardware, tools, and supplies. Shop now for reliable products at great prices.",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "keywords": [
     "hardware",
@@ -18,13 +18,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-     "format": "prettier --write src",
+    "format": "prettier --write src",
     "preview": "vite preview"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.0"
   },
@@ -40,7 +41,7 @@
     "vite": "^6.3.5"
   },
   "peerDependencies": {
-  "react": "^19.1.0",
-  "react-dom": "^19.1.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

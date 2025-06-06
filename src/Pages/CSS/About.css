@@ -1,0 +1,35 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 30px;
+}
+
+.about h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(171, 87, 56);
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.about-container{
+    align-items: flex-start;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.about-container p{
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.about-container h3{
+    color: rgb(207, 77, 30);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}

@@ -8,6 +8,7 @@ import {
 import PropTypes from "prop-types";
 import { useState, useEffect, useContext } from "react";
 import { shopContext } from "../Context/ShopContext";
+import { Link } from "react-router-dom";
 
 const ProductDisc = (props) => {
   const { description, image, name, newPrice, subImages, id } = props.product;
@@ -43,9 +44,9 @@ const ProductDisc = (props) => {
           <div className="details-header-row">
             <p>Fourteen General Supply</p>
             <div className="social-icon">
-              <FaInstagramSquare className="icon" />
-              <FaLinkedin className="icon" />
-              <FaFacebookSquare className="icon" />
+                <Link to='https://www.instagram.com/fourteengeneral/' target="blank"><FaInstagramSquare className='icon'/></Link>  
+                <Link><FaLinkedin className='icon'/></Link> 
+                <Link><FaFacebookSquare className='icon'/></Link>
             </div>
           </div>
         </div>

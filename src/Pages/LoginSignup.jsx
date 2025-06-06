@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import "./CSS/Login.css";
+import { usePageTittle } from "../Components/utils/Helper";
 
 const LoginSignup = () => {
+  usePageTittle('Login - Fourteen General Supply');
   const [showPassword, setShowPassword] = useState(false);
   const [SignIn, setSignIn] = useState(false);
   const handlePasswordToggle = () => setShowPassword(!showPassword);

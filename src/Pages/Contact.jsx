@@ -1,6 +1,7 @@
-import React from 'react'
+import { usePageTittle } from "../Components/utils/Helper";
 
 const Contact = () => {
+  usePageTittle('Contact - Fourteen General Supply');
   return (
     <div>Contact</div>
   )

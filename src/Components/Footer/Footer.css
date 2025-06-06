@@ -75,6 +75,11 @@
     cursor: pointer;
 }
 
+.social-icon a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .icon:hover{
     color: #d87d3c;
 }

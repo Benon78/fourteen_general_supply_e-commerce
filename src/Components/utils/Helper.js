@@ -1,4 +1,5 @@
 import { all_products } from "../../assets/data";
+import { useEffect } from "react";
 
 export const getFilteredProduct = async(category) => {
     if(!category || category === 'all products'){
@@ -23,4 +24,12 @@ export const getProduct = (id) =>{
 export const getRelatedProduct = (id) => {
   const product = getProduct(id)
   return all_products.filter((item) => item.category === product.category).slice(0,5);
+}
+
+export const usePageTittle = (title) => {
+          const titleUpper = title.split('')[0].toUpperCase() + title.split('').slice(1).join('')
+                
+        useEffect(()=>{
+          document.title = titleUpper;
+        },[title])
 }

@@ -41,9 +41,9 @@ function Footer() {
                 Supply. All rights reserved.
             </div>
             <div className="social-icon">
-                <FaInstagramSquare className='icon'/>
-                <FaLinkedin className='icon'/>
-                <FaFacebookSquare className='icon'/>
+                <Link to='https://www.instagram.com/fourteengeneral/' target='blank'><FaInstagramSquare className='icon'/></Link>  
+                <Link><FaLinkedin className='icon'/></Link> 
+                <Link><FaFacebookSquare className='icon'/></Link>
             </div>
         </div>
     </div>

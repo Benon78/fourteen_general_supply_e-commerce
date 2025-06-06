@@ -111,3 +111,10 @@
     border-radius: 10px;
     background: #252525;
 }
+.product-category-item{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 20px;
+    row-gap: 15px;
+    gap: 10px;
+}

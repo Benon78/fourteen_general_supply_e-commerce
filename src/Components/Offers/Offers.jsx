@@ -1,6 +1,7 @@
 import './Offers.css'
 import { all_products } from '../../assets/data'
 import Item from '../Item/Item'
+import { Link } from 'react-router-dom'
 
 const Offers = () => {
     const offersProduct = all_products.filter((item) => item.category === 'New Laptops').slice(0,4)
@@ -9,7 +10,7 @@ const Offers = () => {
         <div className="offers-left">
             <h3>New Arivals</h3>
             <p>Amazing Laptops in stock Now!</p>
-            <button>Shop Offers</button>
+           <Link to='/products/laptops'><button>Shop Offers</button></Link> 
         </div>
         <div className="offers-right">
             {

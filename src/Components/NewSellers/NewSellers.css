@@ -1,0 +1,43 @@
+.new-sellers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background: #ee9f66;
+    padding: 20px;
+}
+
+.new-sellers h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.new-sellers p{
+    font-size: 0.94rem;
+    font-weight: 350;
+}
+
+.new-sellers-form{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.new-sellers-form input{
+    padding: 10px;
+    width: 300px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.new-sellers-form button{
+    padding: 10px;
+     background: #5a5a5a;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

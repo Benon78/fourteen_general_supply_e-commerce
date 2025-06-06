@@ -11,7 +11,7 @@ const Hero = () => {
             <Link to="/products"><button>Explore More</button></Link>
         </div>
         <div className="hero-right">
-            <img src='/hero.png' alt='Dell Inspiron 14 5406 2-in-1 Intel Core i3-11th Gen' />
+            <img src='/Image/hero.png' alt='Dell Inspiron 14 5406 2-in-1 Intel Core i3-11th Gen' />
         </div>
     </div>
   )

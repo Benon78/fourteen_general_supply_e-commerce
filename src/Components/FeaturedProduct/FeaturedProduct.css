@@ -23,7 +23,7 @@
 .featured-item{
     margin-top: 50px;
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 @media(max-width:1280px){

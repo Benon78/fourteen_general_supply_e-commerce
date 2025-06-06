@@ -1,5 +1,4 @@
 import "./NavBar.css";
-import logo_img from "../../assets/images/Logo.jpg";
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
@@ -16,7 +15,7 @@ const NavBar = () => {
   return (
     <div className="navBar">
       <div className="nav-logo">
-        <Link to='/'><img src={logo_img} alt="logo" /></Link>
+        <Link to='/'><img src='/Logo.jpg' alt="logo" /></Link>
       </div>
       <ul className="nav-links">
         <li>

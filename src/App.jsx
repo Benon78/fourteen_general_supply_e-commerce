@@ -12,6 +12,7 @@ import ProductDetail from './Components/ProductDetail/ProductDetail';
 import ProductCategory from './Pages/ProductCategory';
 import Footer from './Components/Footer/Footer.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
+import ScrollUp from './Components/ScrollUp/ScrollUp.jsx';
 function App() {
  
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path='*' element={<NotFoundPage/>}/>
     </Routes>
     <Footer/>
+    <ScrollUp/>
   </BrowserRouter>
   )
 }

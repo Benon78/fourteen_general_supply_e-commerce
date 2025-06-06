@@ -99,6 +99,8 @@
     box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
     border-radius: 5px;
     padding: 20px;
+    height: auto;
+    max-height: 422px;
 }
 
 .product-total{

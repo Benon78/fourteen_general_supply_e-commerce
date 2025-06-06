@@ -1,13 +1,15 @@
-.recent{
+.recent {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     height: 60vh;
     margin-top: 40px;
+    width: 100%;
+    padding: 0 20px; /* optional, for some side margins */
 }
 
-.recent h1{
+.recent h1 {
     color: #171717;
     font-size: 20px;
     font-weight: 500;
@@ -16,7 +18,7 @@
     align-self: flex-start;
 }
 
-.recent hr{
+.recent hr {
     width: 200px;
     height: 3px;
     border-radius: 10px;
@@ -24,85 +26,145 @@
     align-self: flex-start;
 }
 
-.recent-item{
-    margin-top: 30px;
+.recent-carousel-controls {
+    position: relative;
     display: flex;
-    gap: 50px;
-   
+    z-index: 1;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
-.recent-item .item {
+
+/* Make carousel take full width */
+.recent-item-carousel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    width: 100%; /* Full width of container */
+    position: relative;
+}
+
+/* Hide scrollbar for all browsers */
+.recent-item-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Item styles */
+.recent-item-carousel .item {
      background: white;
+     flex: 0 0 auto;  /* prevent shrinking/expanding */
+     margin-right: 16px; /* optional space between items */
+     min-width: 150px; /* adjust as needed */
+     height: auto; /* for responsiveness */
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-@media(max-width:1280px){
-     .recent{
-        height: 60vh;
-     }
+.recent-item-carousel .item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
-     .recent h1{
+/* Scroll Buttons - hidden by default, visible on carousel hover */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(130, 129, 129, 0.6); /* semi-transparent */
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s, background 0.2s, transform 0.2s;
+    z-index: 2;
+}
+
+/* Position buttons on the left/right of carousel */
+.scroll-btn.left {
+    left: 10px;
+}
+.scroll-btn.right {
+    right: 10px;
+}
+
+/* Show buttons only when hovered over carousel */
+.recent-carousel-controls:hover .scroll-btn {
+    opacity: 1;
+    background: rgba(130, 129, 129, 0.8);
+}
+
+/* You can also add hover effect on buttons */
+.scroll-btn:hover {
+    background: #e5b47c;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media(max-width: 1280px){
+    .recent h1 {
         font-size: 40px;
-     }
-     .recent hr{
+    }
+    .recent hr {
         width: 160px;
         height: 4px;
-     }
-    .recent-item{
-    margin-top: 30px;
-    gap: 20px;
     }
-
+    /* Buttons tweaks for mobile */
+    .scroll-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
 }
-@media(max-width:1024px){
-     .recent{
-        height: 60vh;
-     }
 
-     .recent h1{
+@media(max-width: 1024px){
+    .recent h1 {
         font-size: 30px;
-     }
-     .recent hr{
+    }
+    .recent hr {
         width: 120px;
         height: 3px;
-     }
-    .recent-item{
-        margin-top: 20px;
-        gap: 15px;
     }
-
 }
 
-@media(max-width:800px){
-     .recent{
+@media(max-width: 800px){
+    .recent {
         height: 50vh;
         gap: 8px;
-     }
-
-     .recent h1{
-        font-size: 20px;
-     }
-     .recent hr{
-        width: 100px;
-     }
-    .recent-item{
-        gap: 5px;
     }
-
+    .recent h1 {
+        font-size: 20px;
+    }
+    .recent hr {
+        width: 100px;
+    }
+    /* Hide scroll buttons if needed or keep visible with smaller size */
+    /* Optional: hide buttons on very small screens if touch navigation available */
 }
-@media(max-width:500px){
-     .recent{
-        height: 90vh;
-     }
 
-    .recent-item{
-        display: grid;
+@media(max-width: 500px){
+    .recent {
+        height: 90vh;
+    }
+    .recent-item-carousel {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-
 }
 
-@media(max-width:400px){
-    .recent-item{
+@media(max-width: 400px){
+    .recent-item-carousel {
         gap: 10px;
     }
 }

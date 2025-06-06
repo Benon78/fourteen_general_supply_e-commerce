@@ -1,8 +1,10 @@
 import './FeaturedProduct.css'
-import { all_products } from './../../assets/data';
 import Item from '../Item/Item';
+import { useContext } from 'react';
+import { shopContext } from '../Context/ShopContext';
 const FeaturedProduct = () => {
-    const featuredProduct = all_products.slice(1,5)
+  const {all_products} = useContext(shopContext)
+    const featuredProduct = all_products.slice(0,5)
   return (
     <div className='featured'>
        <h1>featured products</h1>

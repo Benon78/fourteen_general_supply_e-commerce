@@ -1,5 +1,4 @@
 import'./Hero.css'
-import Hero_Bunner from '../../assets/images/hero.png'
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -12,7 +11,7 @@ const Hero = () => {
             <Link to="/products"><button>Explore More</button></Link>
         </div>
         <div className="hero-right">
-            <img src={Hero_Bunner} alt='Dell Inspiron 14 5406 2-in-1 Intel Core i3-11th Gen' />
+            <img src='/hero.png' alt='Dell Inspiron 14 5406 2-in-1 Intel Core i3-11th Gen' />
         </div>
     </div>
   )

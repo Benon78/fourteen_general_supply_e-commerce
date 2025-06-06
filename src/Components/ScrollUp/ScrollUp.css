@@ -1,0 +1,23 @@
+.scroll-up{
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+.scroll-up button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #adabab;
+    cursor: pointer;
+}
+.scroll-up button:hover{
+    background: rgb(243, 164, 69);
+}
+
+.scroll-icon{
+    font-size: 1.5rem;
+}

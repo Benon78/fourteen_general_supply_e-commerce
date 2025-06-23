@@ -18,9 +18,20 @@ const LoginSignup = () => {
   const handleInputChange = (e) => {
     setInputValues({ ...inputValues, [e.target.name]: e.target.value });
   };
+  
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    alert(`${inputValues.email}: Submited successefully!`)
+    setInputValues({
+      username: "",
+      email: "",
+      password: "",
+    })
+  }
   return (
     <div className="login">
-      <div className="login-container">
+      <form onSubmit={handleSubmit} className="login-container">
         {SignIn ? <h2>Sign In</h2> : <h2>Sign Up</h2>}
         <div className="signUp-form">
           <input
@@ -71,21 +82,21 @@ const LoginSignup = () => {
             <>
               <p>
                 Forget password?
-                <button>Recover</button>
+                <button type="button">Recover</button>
               </p>
               <p>
                 Don't have an account?
-                <button onClick={handleSignInToggle}>Sign up</button>
+                <button type="button" onClick={handleSignInToggle}>Sign up</button>
               </p>
             </>
           ) : (
             <p>
               Already have an account?
-              <button onClick={handleSignInToggle}>Sign in</button>
+              <button type="button" onClick={handleSignInToggle}>Sign in</button>
             </p>
           )}
         </div>
-      </div>
+      </form>
     </div>
   );
 };

@@ -18,6 +18,7 @@ const LoginSignup = () => {
   const handleInputChange = (e) => {
     setInputValues({ ...inputValues, [e.target.name]: e.target.value });
   };
+  
 
   const handleSubmit = (e) =>{
     e.preventDefault();

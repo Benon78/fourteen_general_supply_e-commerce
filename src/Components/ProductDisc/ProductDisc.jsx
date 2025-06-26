@@ -12,15 +12,15 @@ import { Link } from "react-router-dom";
 
 const ProductDisc = (props) => {
   const { description, image, name, newPrice, subImages, id } = props.product;
-  const { addToCart, getRecentViewed} = useContext(shopContext)
-  const [mainImg, setMainImg] = useState(image)
+  const { addToCart, getRecentViewed } = useContext(shopContext);
+  const [mainImg, setMainImg] = useState(image);
 
-  const handleClick = (productId) =>{
-          addToCart(productId)
-          getRecentViewed(productId)
-  }
+  const handleClick = (productId) => {
+    addToCart(productId);
+    getRecentViewed(productId);
+  };
 
-    useEffect(() => {
+  useEffect(() => {
     setMainImg(image);
   }, [image]);
   return (
@@ -29,7 +29,12 @@ const ProductDisc = (props) => {
         <div className="product-image-smalls">
           {subImages && Array.isArray(subImages)
             ? subImages.map((subImg, i) => (
-                <img key={i} src={subImg} alt={name}  onClick={()=>setMainImg(subImg)}/>
+                <img
+                  key={i}
+                  src={subImg}
+                  alt={name}
+                  onClick={() => setMainImg(subImg)}
+                />
               ))
             : null}
         </div>
@@ -44,9 +49,18 @@ const ProductDisc = (props) => {
           <div className="details-header-row">
             <p>Fourteen General Supply</p>
             <div className="social-icon">
-                <Link to='https://www.instagram.com/fourteengeneral/' target="blank"><FaInstagramSquare className='icon'/></Link>  
-                <Link><FaLinkedin className='icon'/></Link> 
-                <Link><FaFacebookSquare className='icon'/></Link>
+              <Link
+                to="https://www.instagram.com/fourteengeneral/"
+                target="blank"
+              >
+                <FaInstagramSquare className="icon" />
+              </Link>
+              <Link>
+                <FaLinkedin className="icon" />
+              </Link>
+              <Link>
+                <FaFacebookSquare className="icon" />
+              </Link>
             </div>
           </div>
         </div>
@@ -66,9 +80,11 @@ const ProductDisc = (props) => {
             )}
           </div>
           <div className="prices">
-            <p><strong>Price:</strong> <span>{newPrice}TZS</span></p>
+            <p>
+              <strong>Price:</strong> <span>{newPrice}TZS</span>
+            </p>
           </div>
-          <button onClick={()=>handleClick(id)}>ADD TO CART</button>
+          <button onClick={() => handleClick(id)}>ADD TO CART</button>
         </div>
       </div>
     </div>

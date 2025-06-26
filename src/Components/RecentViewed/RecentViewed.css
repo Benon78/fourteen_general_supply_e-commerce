@@ -74,7 +74,6 @@
 .scroll-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background: rgba(130, 129, 129, 0.6); /* semi-transparent */
     border: none;
     font-size: 2rem;
@@ -86,7 +85,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 0.5;
     transition: opacity 0.3s, background 0.2s, transform 0.2s;
     z-index: 2;
 }
@@ -100,16 +99,11 @@
 }
 
 /* Show buttons only when hovered over carousel */
-.recent-carousel-controls:hover .scroll-btn {
+.recent-carousel-controls .scroll-btn:hover {
     opacity: 1;
-    background: rgba(130, 129, 129, 0.8);
+    background: #e5b47c;
 }
 
-/* You can also add hover effect on buttons */
-.scroll-btn:hover {
-    background: #e5b47c;
-    transform: scale(1.05);
-}
 
 /* Responsive adjustments */
 @media(max-width: 1280px){

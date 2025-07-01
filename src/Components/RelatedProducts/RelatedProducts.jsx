@@ -1,27 +1,17 @@
 import './RelatedProducts.css'
-import Item from './../Item/Item';
+import Carousel from '../Carousel/Carousel'
 
 
-const RelatedProducts = (props) => {
+const RelatedProducts = ({relatedProduct}) => {
   return (
     <div className='related'>
        <h1>Related Products</h1>
        <hr />
-       <div className="related-item">
         {
-          props.relatedProduct && Array.isArray(props.relatedProduct)? (
-         props.relatedProduct.map((item,i)=>{
-              return <Item key={i}
-                          id={item.id}
-                          name={item.name}
-                          image={item.image}
-                          old_price={item.oldPrice}
-                          new_price = {item.newPrice}
-                              />
-          })
+          relatedProduct && Array.isArray(relatedProduct)? (
+            <Carousel products={relatedProduct} />
          ): null
         }
-       </div>
     </div>
   )
 }

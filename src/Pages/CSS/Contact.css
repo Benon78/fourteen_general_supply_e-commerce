@@ -1,0 +1,30 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0px;
+    /* align-items: center; */
+}
+
+.contat-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contat-header h1{
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: chocolate;
+}
+
+.contat-header p{
+    font-weight: 400;
+}
+
+.contact-map{
+    width: 80%;
+    margin: auto;
+    height: 450px;
+}

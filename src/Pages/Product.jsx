@@ -1,15 +1,26 @@
-import { Await, Link, Outlet, useLocation } from "react-router-dom";
+import { Await, Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import BreadCrum from "../Components/BreadCrum/BreadCrum";
 import "./CSS/Product.css";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { MdViewModule, MdViewList } from "react-icons/md";
-import { getFilteredProduct, usePageTittle } from "../Components/utils/Helper.js";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import {
+  getFilteredProduct,
+  usePageTittle,
+} from "../Components/utils/Helper.js";
 import Item from "../Components/Item/Item.jsx";
 import Support from "../Components/Support/Support.jsx";
 import Loading from "../Components/Loading/Loading.jsx";
+import RecentViewed from "./../Components/RecentViewed/RecentViewed";
 
 const Product = () => {
   const [selected, setSelected] = useState("featured");
+  const [showorder, setShowOrder] = useState(false);
+  const [showFlex, setShowFlex] = useState(false);
+
+  const styled = {
+    color: "#FF6A00",
+  };
 
   // Refactor location detection
   const category = useLocation().pathname.split("/").pop();
@@ -27,10 +38,14 @@ const Product = () => {
     async () => await getFilteredProduct(location),
     [location]
   );
-  usePageTittle(`${location} - Fourteen General Supply`)
+  usePageTittle(`${location} - Fourteen General Supply`);
   const renderProductsElements = (products) => {
     return location === "all products" ? (
-      <div className="product-category-item">
+      <div
+        className={
+          showFlex ? "product-category-item-view" : "product-category-item"
+        }
+      >
         {products.map((item) => (
           <Item
             key={item.id}
@@ -44,7 +59,7 @@ const Product = () => {
       </div>
     ) : (
       <div>
-        <Outlet context={products} />
+        <Outlet context={{products,showFlex}} />
       </div>
     );
   };
@@ -60,31 +75,133 @@ const Product = () => {
           <h3>Main menu</h3>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About Fourteen General</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="/about"
+              >
+                About fourteen General
+              </NavLink>
             </li>
             <li>
-              <Link to="./laptops">Laptops</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./laptops"
+              >
+                Laptops
+              </NavLink>
             </li>
             <li>
-              <Link to="./desktops">Desktops</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./desktops"
+              >
+                Desktops
+              </NavLink>
             </li>
             <li>
-              <Link to="./macbooks">Macbooks</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./macbooks"
+              >
+                Macbooks
+              </NavLink>
             </li>
             <li>
-              <Link to="./tablets">Tablets</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./tablets"
+              >
+                Tablets
+              </NavLink>
             </li>
             <li>
-              <Link to="./printers">Printers</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./printers"
+              >
+                Printers
+              </NavLink>
             </li>
             <li>
-              <Link to="./accessories">External Hard Disks</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./accessories"
+              >
+                External Hard Disks
+              </NavLink>
             </li>
             <li>
-              <Link to="./mobile-phones">Mobile Phones</Link>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./mobile-phones"
+              >
+                Mobile Phones
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="./torners"
+              >
+                Toners & Cartridges
+              </NavLink>
+            </li>
+            <div className="more-products-div">
+              <div
+                className="show-categories"
+                onClick={() => setShowOrder(!showorder)}
+              >
+                <p>More Categories</p>
+                {showorder ? (
+                  <FaAngleDown className="order-icon" />
+                ) : (
+                  <FaAngleUp className="order-icon" />
+                )}
+              </div>
+              {showorder ? (
+                <ul>
+                  <li>
+                    <NavLink
+                      style={({ isActive }) => (isActive ? styled : null)}
+                      to="./projectors"
+                    >
+                      Projectors
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      style={({ isActive }) => (isActive ? styled : null)}
+                      to="./ups"
+                    >
+                      UPS
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      style={({ isActive }) => (isActive ? styled : null)}
+                      to="./flash-disk"
+                    >
+                      flash disk
+                    </NavLink>
+                  </li>
+                </ul>
+              ) : null}
+            </div>
+            <li>
+              <NavLink
+                style={({ isActive }) => (isActive ? styled : null)}
+                to="/contact"
+              >
+                Contact us
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -98,8 +215,8 @@ const Product = () => {
                       <h3>{location}</h3>
                       <div className="category-sort">
                         <div className="sort-items-count">
-                          Showing: {resolvedProducts.length} of {resolvedProducts.length}{" "}
-                          products
+                          Showing: {resolvedProducts.length} of{" "}
+                          {resolvedProducts.length} products
                         </div>
                         <div className="sort-items">
                           Sort by:{" "}
@@ -120,10 +237,17 @@ const Product = () => {
                             <option value="new-to-old">Date, new to old</option>
                           </select>
                         </div>
-                        <div className="view">
-                          View: <MdViewModule className="view-icon" />{" "}
-                          <MdViewList className="view-icon" />
-                        </div>
+                        {/* <div className="view">
+                          View:{" "}
+                          <MdViewModule
+                            onClick={() => setShowFlex(false)}
+                            className="view-icon"
+                          />{" "}
+                          <MdViewList
+                            onClick={() => setShowFlex(true)}
+                            className="view-icon"
+                          />
+                        </div> */}
                       </div>
                     </div>
                     <hr />
@@ -135,6 +259,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <RecentViewed />
       <Support />
     </div>
   );

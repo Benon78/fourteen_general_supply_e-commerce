@@ -4,6 +4,8 @@
     align-items: center;
     gap: 10px;
     height: 70vh;
+    width: 90%;
+    margin: auto;
 }
 
 .featured h1{

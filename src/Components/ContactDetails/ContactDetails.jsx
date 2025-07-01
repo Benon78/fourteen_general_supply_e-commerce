@@ -27,14 +27,14 @@ function ContactDetails() {
           </div>
           <div className="left-content">
             <h3>Contact</h3>
-            <p><FaPhone/> +2557-8973-3300</p>
-            <p><FaWhatsapp/> +2557-6442-2305</p>
-            <p><FaTelegramPlane/> fourteengeneralsupplies@gmail.com</p>
+            <p><FaPhone className="contact-icon"/> +2557-8973-3300</p>
+            <p><FaWhatsapp className="contact-icon"/> +2557-6442-2305</p>
+            <p><FaTelegramPlane className="contact-icon"/> fourteengeneralsupplies@gmail.com</p>
           </div>
           <div className="left-content">
             <h3>Hour of operation</h3>
-            <p>Mon - Sat: 08:00 AM - 20:00 PM</p>
-            <p>Sun: 10:00 AM - 12:30 PM</p>
+            <p><span>Mon - Sat:</span> 08:00 AM - 20:00 PM</p>
+            <p><span>Sun:</span> 10:00 AM - 12:30 PM</p>
           </div>
           <div className="left-content">
             <h3>Follow Us</h3>

@@ -1,0 +1,103 @@
+
+.carousel-controls {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Make carousel take full width */
+.item-carousel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    width: 100%; /* Full width of container */
+    position: relative;
+}
+
+/* Hide scrollbar for all browsers */
+.item-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Item styles */
+.item-carousel .item {
+     background: white;
+     flex: 0 0 auto;  /* prevent shrinking/expanding */
+     margin-right: 16px; /* optional space between items */
+     min-width: 150px; /* adjust as needed */
+     height: auto; /* for responsiveness */
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-carousel .item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Scroll Buttons - hidden by default, visible on carousel hover */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    background: rgba(130, 129, 129, 0.6); /* semi-transparent */
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.3s, background 0.2s, transform 0.2s;
+    z-index: 2;
+}
+
+/* Position buttons on the left/right of carousel */
+.scroll-btn.left {
+    left: 10px;
+}
+.scroll-btn.right {
+    right: 10px;
+}
+
+/* Show buttons only when hovered over carousel */
+.carousel-controls .scroll-btn:hover {
+    opacity: 1;
+    background: #e5b47c;
+}
+
+
+/* Responsive adjustments */
+@media(max-width: 1280px){
+    /* Buttons tweaks for mobile */
+    .scroll-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media(max-width: 500px){
+    .item-carousel {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 400px){
+    .item-carousel {
+        gap: 10px;
+    }
+}

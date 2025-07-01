@@ -1,6 +1,7 @@
 .support{
     margin: 30px auto;
     display: flex;
+    gap: 30px;
     align-items: center;
     justify-content: space-around;
 }

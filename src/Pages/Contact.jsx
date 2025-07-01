@@ -1,10 +1,12 @@
 import { usePageTittle } from "../Components/utils/Helper";
-
+import './CSS/Contact.css'
 
 // Import necessary components from react-leaflet
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import ContactDetails from "../Components/ContactDetails/ContactDetails";
+import NewSellers from "../Components/NewSellers/NewSellers";
+import Support from './../Components/Support/Support';
 
 const Contact = () => {
   usePageTittle("Contact - Fourteen General Supply");
@@ -19,7 +21,7 @@ const Contact = () => {
       </div>
 
       {/* Responsive Map Container */}
-      <div style={{ width: "100%", height: "450px", marginTop: "20px" }}>
+      <div className="contact-map">
         <MapContainer
           center={position}
           zoom={15}
@@ -37,6 +39,8 @@ const Contact = () => {
         </MapContainer>
       </div>
     <ContactDetails/>
+    <NewSellers/>
+    <Support/>
     </div>
   );
 };

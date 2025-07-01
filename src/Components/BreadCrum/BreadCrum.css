@@ -3,7 +3,8 @@
     align-items: center;
     text-transform: capitalize;
     gap: 10px;
-    margin-bottom: 20px;
+    margin: 10px;
+    padding: 10px;
 }
 .navigate-icon{
     font-size: 1.2rem;

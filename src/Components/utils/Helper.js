@@ -23,7 +23,7 @@ export const getProduct = (id) =>{
 
 export const getRelatedProduct = (id) => {
   const product = getProduct(id)
-  return all_products.filter((item) => item.category === product.category).slice(0,5);
+  return all_products.filter((item) => item.category === product.category);
 }
 
 export const usePageTittle = (title) => {

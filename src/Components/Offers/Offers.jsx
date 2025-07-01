@@ -1,10 +1,12 @@
 import './Offers.css'
-import { all_products } from '../../assets/data'
-import Item from '../Item/Item'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { shopContext } from './../Context/ShopContext';
+import Carousel from '../Carousel/Carousel'
 
 const Offers = () => {
-    const offersProduct = all_products.filter((item) => item.category === 'New Laptops').slice(0,4)
+  const {all_products} = useContext(shopContext)
+    const offersProduct = all_products.filter((item) => item.category === 'New Laptops');
   return (
     <div className='offers'>
         <div className="offers-left">
@@ -13,17 +15,7 @@ const Offers = () => {
            <Link to='/products/laptops'><button>Shop Offers</button></Link> 
         </div>
         <div className="offers-right">
-            {
-               offersProduct.map((item,i)=>{
-                return <Item key={i}
-                            id={item.id}
-                            image={item.image}
-                            name={item.name}
-                            old_price={item.oldPrice}
-                            new_price={item.newPrice}
-                            />
-               }) 
-            }
+          <Carousel products={offersProduct}/>
         </div>
     </div>
   )

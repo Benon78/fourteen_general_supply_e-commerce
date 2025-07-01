@@ -2,7 +2,7 @@
   "name": "fourteen_general_supply_e-commerce",
   "description": "Fourteen General Supply provides quality hardware, tools, and supplies. Shop now for reliable products at great prices.",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "keywords": [
     "hardware",

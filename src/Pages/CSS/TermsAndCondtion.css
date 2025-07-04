@@ -1,0 +1,34 @@
+.terms-container{
+    background: #eeecec;
+    box-sizing: border-box;
+    padding: 30px 20px;
+}
+
+.terms{
+    width: 70%;
+    margin:  auto;
+}
+
+.terms h2{
+    color: rgb(114, 66, 32);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.terms h4{
+    color:rgb(114, 66, 32);
+    margin-bottom: 10px;
+
+}
+
+.terms p{
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.terms ul{
+    margin-left: 35px;
+    margin-bottom: 20px;
+}

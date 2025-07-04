@@ -9,7 +9,7 @@
     padding: 0 20px; /* optional, for some side margins */
 }
 
-.recent h1 {
+.recent h2 {
     color: #171717;
     font-size: 20px;
     font-weight: 500;
@@ -29,7 +29,7 @@
 
 /* Responsive adjustments */
 @media(max-width: 1280px){
-    .recent h1 {
+    .recent h2 {
         font-size: 40px;
     }
     .recent hr {
@@ -39,7 +39,7 @@
 }
 
 @media(max-width: 1024px){
-    .recent h1 {
+    .recent h2 {
         font-size: 30px;
     }
     .recent hr {
@@ -53,14 +53,12 @@
         height: 50vh;
         gap: 8px;
     }
-    .recent h1 {
+    .recent h2 {
         font-size: 20px;
     }
     .recent hr {
         width: 100px;
     }
-    /* Hide scroll buttons if needed or keep visible with smaller size */
-    /* Optional: hide buttons on very small screens if touch navigation available */
 }
 
 @media(max-width: 500px){

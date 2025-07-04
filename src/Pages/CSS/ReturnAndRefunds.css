@@ -1,0 +1,22 @@
+.return-and-refunds{
+    width: 100%;
+}
+
+.return-and-refunds-content{
+    width: 50%;
+    margin: 20px auto;
+    height: 20vh;
+}
+
+.return-and-refunds-content h3{
+    color: chocolate;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.return-and-refunds-content p{
+    font-weight: 350;
+    line-height: 1.5;
+}

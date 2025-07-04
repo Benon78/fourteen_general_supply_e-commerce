@@ -8,7 +8,7 @@ const RecentViewed = () => {
   if (!recentView || recentView.length === 0) return null;
   return (
     <div className='recent'>
-      <h1>Recently viewed Products</h1>
+      <h2>Recently viewed Products</h2>
       <hr />
       <Carousel products={recentView}/>
     </div>

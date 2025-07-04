@@ -64,7 +64,11 @@
     font-size: 1.0625rem;
     cursor: pointer;
 }
-
+.menu-icon{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 .login-cart-btn{
     display: flex;
     align-items: center;
@@ -122,9 +126,61 @@
     }
     .nav-links{
         font-size: 1rem;
-        font-weight: 500px;
+        font-weight: 500;
     }
     .nav-links li a:active{
         font-size: 1rem;
     }
+}
+@media(max-width:1120px){  
+.nav-search{
+    width: 450px; 
+}
+.login-cart-btn{
+    gap: 20px;
+}
+
+.login-cart-btn button{
+    width: 140px;
+    height: 45px;
+}
+
+}
+@media(max-width:1024px){  
+.nav-search{
+    width: 350px; 
+}
+
+.login-cart-btn button{
+    width: 130px;
+}
+
+}
+@media(max-width:1000px){  
+.nav-search{
+    width: 350px; 
+}
+
+.login-cart-btn button{
+    width: 100px;
+}
+
+.nav-links{
+    display: none;
+        height: 60px;
+        width: 100%;
+        position: absolute;
+        background: white;
+        justify-content: center;
+        top: 65px;
+}
+
+.nav-links-visible{
+    display: flex;
+}
+
+.menu-icon{
+    display: block;
+}
+
 }

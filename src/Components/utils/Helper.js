@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { all_products } from "../../assets/data";
 import { useEffect } from "react";
 
@@ -27,9 +28,28 @@ export const getRelatedProduct = (id) => {
 }
 
 export const usePageTittle = (title) => {
+          const pathName = useLocation().pathname
           const titleUpper = title.split('')[0].toUpperCase() + title.split('').slice(1).join('')
+          const url = `https://fourteengeneral-supply-shop.netlify.app${pathName}`
                 
         useEffect(()=>{
+          // Set document title
           document.title = titleUpper;
-        },[title])
+
+          // Create or update the canonical link element
+          let link = document.querySelector("link[rel='canonical']");
+          if(!link){
+            link = document.createElement('link');
+            link.rel = "canonical";
+            document.head.appendChild(link);
+          }
+          link.href = url
+          
+          // Optional cleanup: remove the link when component unmounts
+          return () => {
+            if (link.parentNode) {
+              link.parentNode.removeChild(link);
+            }
+          };
+        },[title,pathName])
 }

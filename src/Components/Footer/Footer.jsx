@@ -31,16 +31,13 @@ function Footer() {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link>FAQ</Link>
+              <Link to="/terms-and-condition">Terms and Conditions</Link>
             </li>
             <li>
-              <Link>Privacy Policy</Link>
+              <Link to="/shiping-policy">Shiping Policy</Link>
             </li>
             <li>
-              <Link>Shiping Policy</Link>
-            </li>
-            <li>
-              <Link>Returns & Refunds</Link>
+              <Link to="/return-and-refunds">Returns & Refunds</Link>
             </li>
           </ul>
         </div>

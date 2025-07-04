@@ -1,0 +1,22 @@
+.shiping-container{
+    width: 100%;
+}
+
+.shiping-content{
+    width: 50%;
+    margin: 20px auto;
+    height: 20vh;
+}
+
+.shiping-content h3{
+    color: chocolate;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.shiping-content p{
+    font-weight: 350;
+    line-height: 1.5;
+}

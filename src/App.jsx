@@ -6,6 +6,9 @@ import Footer from "./Components/Footer/Footer.jsx";
 import ScrollUp from "./Components/ScrollUp/ScrollUp.jsx";
 import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 import Loading from "./Components/Loading/Loading.jsx";
+import TermsAndCondition from "./Pages/TermsAndCondition.jsx";
+import ShipingPolicy from "./Pages/ShipingPolicy.jsx";
+import ReturnAndRefunds from "./Pages/ReturnAndRefunds.jsx";
 
 // Lazy load pages
 const Shop = lazy(() => import("./Pages/Shop.jsx"));
@@ -47,6 +50,21 @@ function App() {
             path="/contact"
             errorElement={<ErrorPage />}
             element={<Contact />}
+          />
+          <Route
+            path="/terms-and-condition"
+            errorElement={<ErrorPage />}
+            element={<TermsAndCondition/>}
+          />
+          <Route
+            path="/shiping-policy"
+            errorElement={<ErrorPage />}
+            element={<ShipingPolicy/>}
+          />
+          <Route
+            path="/return-and-refunds"
+            errorElement={<ErrorPage />}
+            element={<ReturnAndRefunds/>}
           />
           <Route
             path="/login"

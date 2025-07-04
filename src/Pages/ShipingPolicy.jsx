@@ -3,7 +3,7 @@ import { usePageTittle } from "../Components/utils/Helper";
 import Support from './../Components/Support/Support';
 
 function ShipingPolicy() {
-  usePageTittle("Shiping Policy - Fourteen General Supply",'shiping-policy');
+  usePageTittle("Shiping Policy - Fourteen General Supply");
   return (
     <div className="shiping-container">
       <div className="shiping-content">

@@ -1,5 +1,6 @@
 import { usePageTittle } from "../Components/utils/Helper";
 import "./CSS/TermsAndCondtion.css";
+import Support from './../Components/Support/Support';
 
 function TermsAndCondition() {
    usePageTittle("Terms and Conditions - Fourteen General Supply");
@@ -76,10 +77,10 @@ function TermsAndCondition() {
           However all browsers have the option to disable cookies for certain
           websites if you wish to do so. But by doing so this will stop the
           functionality of this site and you will basically be unable to buy
-          through the website, but you can always come to visit our shop at City
-          Mall if its a better experience for you.
+          through the website, but you can always come to visit our shop at Faykate Tower if its a better experience for you.
         </p>
       </div>
+      <Support/>
     </div>
   );
 }

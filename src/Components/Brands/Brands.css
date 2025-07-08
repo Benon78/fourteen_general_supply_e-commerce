@@ -1,15 +1,42 @@
-.brands{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px;
-    height: 40vh;
+.brands {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px;
+  height: 40vh;
 }
 
-.brand-icon{
-    border: 1px solid;
-    padding: 10px;
-    height: 126px;
+.brand-icon {
+  border: 1px solid;
+  padding: 10px;
+  height: 126px;
+}
+
+.brand-icon img{
+    width: 120px;
+}
+
+@media (max-width: 1024px) {
+  .brands {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    height: 30vh; /* IE 10+ */
+  }
+}
+@media (max-width: 500px) {
+  .brands {
+    width: 90%;
+    gap: 0px;
+    justify-content: flex-start;
+  }
+  .brand-icon{
+    padding: 5px;
+    height: 100px;
+  }
+ 
 }

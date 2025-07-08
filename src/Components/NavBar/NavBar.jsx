@@ -2,15 +2,26 @@ import "./NavBar.css";
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { shopContext } from "../Context/ShopContext";
 import { FiMenu } from "react-icons/fi";
 const NavBar = () => {
   const {getTotalCartItem} = useContext(shopContext)
   const menuRef = useRef()
+  const [windowWidth,setWindowWidth] = useState(window.innerWidth)
+
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+      useEffect(()=>{
+          window.addEventListener('resize',updateWindowWidth)
+          return ()=> window.removeEventListener('resize',updateWindowWidth)
+      },[])
+
   const styled = {
     textDecoration: "underline",
-    fontSize: "1.25rem",
+    fontSize: windowWidth < 1000 ? " 1rem":"1.25rem",
     fontWeight: "500",
     color: "#FF6A00",
   };
@@ -59,8 +70,8 @@ const NavBar = () => {
           <Link to='/cart'><FaShoppingCart className="cart-icon"/></Link>
           <p className="cart-count">{getTotalCartItem()}</p>
         </div>
+        <FiMenu onClick={dropdownToggle} className="menu-icon"/>
       </div>
-      <FiMenu onClick={dropdownToggle} className="menu-icon"/>
     </div>
   );
 };

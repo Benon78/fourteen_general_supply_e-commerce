@@ -84,14 +84,9 @@
 }
 @media(max-width:500px){
      .featured{
-        height: 90vh;
+        height: 50vh;
      }
 
-    .featured-item{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
 
 }
 

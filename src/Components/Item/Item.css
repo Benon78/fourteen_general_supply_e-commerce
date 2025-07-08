@@ -50,7 +50,13 @@
         width: 170px;
         font-size: 13px;
     }
-
+    .item-prices{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .item-price-new{
+        font-size: 14px;
+    }
     .item-price-old{
         font-size: 13px;
     }

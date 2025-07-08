@@ -19,6 +19,7 @@
     -ms-overflow-style: none; /* IE 10+ */
     width: 100%; /* Full width of container */
     position: relative;
+    gap: 20px;
 }
 
 /* Hide scrollbar for all browsers */
@@ -30,7 +31,6 @@
 .item-carousel .item {
      background: white;
      flex: 0 0 auto;  /* prevent shrinking/expanding */
-     margin-right: 16px; /* optional space between items */
      min-width: 150px; /* adjust as needed */
      height: auto; /* for responsiveness */
      border-radius: 8px;
@@ -88,16 +88,24 @@
     }
 }
 
+@media(max-width:800px){
+    .scroll-btn{
+        display: none;
+    }
+}
 
 @media(max-width: 500px){
     .item-carousel {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        /* grid-template-columns: 1fr 1fr; */
+        gap: 18px;
+    }
+    .scroll-btn{
+        display: none;
     }
 }
 
 @media(max-width: 400px){
     .item-carousel {
-        gap: 10px;
+        gap: 5px;
     }
 }

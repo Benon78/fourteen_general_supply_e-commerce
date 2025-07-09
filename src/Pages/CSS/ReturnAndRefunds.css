@@ -5,7 +5,7 @@
 .return-and-refunds-content{
     width: 50%;
     margin: 20px auto;
-    height: 20vh;
+    /* height: 20vh; */
 }
 
 .return-and-refunds-content h3{
@@ -19,4 +19,29 @@
 .return-and-refunds-content p{
     font-weight: 350;
     line-height: 1.5;
+}
+
+@media(max-width:768px){
+    .return-and-refunds-content{
+        width: 70%;
+    }
+    .return-and-refunds h3{
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    .return-and-refunds-content p{
+        font-size: .875rem;
+    }
+}
+@media(max-width:425px){
+    .return-and-refunds-content{
+        width: 90%;
+    }
+    .return-and-refunds h3{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .return-and-refunds-content p{
+        font-size: .8125rem;
+    }
 }

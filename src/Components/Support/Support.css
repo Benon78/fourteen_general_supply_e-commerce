@@ -38,3 +38,139 @@
 .support-content p{
     font-size: 0.9rem;
 }
+
+@media(max-width:1440px){
+ .support{
+    width: 100%;
+    margin: 20px auto;
+    gap: 30px;
+    padding: 0px 10px;
+}
+
+.support-container{
+    gap: 20px;
+}
+
+.suport-icon{
+    font-size: 2rem;
+}
+
+.support-container:nth-child(4) .suport-icon{
+    font-size: 2.7rem;
+}
+.support-container:nth-child(3) .suport-icon{
+    font-size: 2.7rem;
+}
+
+.support-content{
+    gap: 5px;
+}
+.support-content h4{
+        font-size: 1.2rem;
+        font-size: 500;
+}
+.support-content p{
+    font-size: 0.9rem;
+}
+}
+@media(max-width:1024px){
+ .support{
+    margin: 10px auto;
+    gap: 10px;
+}
+
+.support-container{
+    gap: 20px;
+}
+
+.suport-icon{
+    font-size: 2.5rem;
+}
+
+.support-container:nth-child(4) .suport-icon{
+    font-size: 3.5rem;
+}
+.support-container:nth-child(3) .suport-icon{
+    font-size: 3.5rem;
+}
+
+.support-content{
+    gap: 5px;
+}
+.support-content h4{
+        font-size: .9rem;
+        font-size: 500;
+}
+.support-content p{
+    font-size: 0.8125rem;
+}
+}
+@media(max-width:768px){
+
+.support-container{
+    gap: 10px;
+}
+
+.suport-icon{
+    font-size: 2.5rem;
+}
+
+.support-container:nth-child(4) .suport-icon{
+    font-size: 3.5rem;
+}
+.support-container:nth-child(3) .suport-icon{
+    font-size: 3.5rem;
+}
+
+.support-content{
+    gap: 5px;
+}
+.support-content h4{
+        font-size: .8125rem;
+        font-size: 500;
+}
+.support-content p{
+    font-size: 0.75rem;
+}
+}
+@media(max-width:425px){
+.support{
+    gap: 20px;
+    padding: 0px 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.support-container{
+
+    gap: 10px;
+}
+
+.suport-icon{
+    font-size: 5rem;
+}
+
+.support-container:nth-child(4) .suport-icon{
+    font-size: 5rem;
+}
+.support-container:nth-child(3) .suport-icon{
+    font-size: 5rem;
+}
+
+.support-content{
+    gap: 5px;
+}
+.support-content h4{
+        font-size: .875rem;
+        font-size: 500;
+        color: rgb(210, 62, 62);
+}
+.support-content p{
+    font-size: 0.75rem;
+}
+
+}
+
+

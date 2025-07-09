@@ -27,8 +27,8 @@ function ContactDetails() {
           </div>
           <div className="left-content">
             <h3>Contact</h3>
-            <p><FaPhone className="contact-icon"/> +2557-8973-3300</p>
-            <p><FaWhatsapp className="contact-icon"/> +2557-6442-2305</p>
+            <p><FaPhone className="contact-icon"/> +2557-1246-5497</p>
+            <p><FaWhatsapp className="contact-icon"/> +2557-1246-5497</p>
             <p><FaTelegramPlane className="contact-icon"/> fourteengeneralsupplies@gmail.com</p>
           </div>
           <div className="left-content">

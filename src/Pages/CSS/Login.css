@@ -94,3 +94,92 @@
 .login-footer p button:hover{
      color: rgb(216, 98, 13);
 }
+
+@media(max-width:1440px){
+    
+.login-container{
+    width: 70%;
+}
+
+.signUp-form{
+    width: 50%;
+}
+
+.login-footer{
+    width: 50%;
+}
+
+}
+@media(max-width:768px){
+    
+.login-container{
+    width: 80%;
+}
+
+.signUp-form{
+    width: 70%;
+}
+
+.login-footer{
+    width: 70%;
+}
+.login-footer p{
+    font-size: .875rem;
+}
+.link-btn{
+    font-size: 1.125rem;
+}
+
+.login-container h2{
+    font-size: 1.25rem;
+}
+
+}
+@media(max-width:425px){
+    .login{
+        padding:  0px;
+    }
+.login-container{
+    width: 100%;
+    border-radius: 0px;
+    height: 100%;
+    margin-top: 0px;
+}
+
+.signUp-form{
+    width: 90%;
+}
+
+.login-footer{
+    width: 80%;
+}
+.login-footer p{
+    font-size: .875rem;
+}
+.link-btn{
+    font-size: 1rem;
+}
+
+.login-container h2{
+    font-size: 1.125rem;
+}
+
+}
+@media(max-width:320px){
+
+
+.login-footer{
+    width: 90%;
+}
+.login-footer p{
+    font-size: .875rem;
+}
+.link-btn{
+    font-size: 1rem;
+}
+
+.login-container h2{
+    font-size: 1.125rem;
+}
+
+}

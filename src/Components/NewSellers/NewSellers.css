@@ -41,3 +41,50 @@
     outline: none;
     cursor: pointer;
 }
+
+
+@media(max-width: 425px){
+    .new-sellers{
+        padding: 10px;
+    }
+
+    .new-sellers h3{
+        font-size: 1.125rem;
+    }
+    .new-sellers p{
+        font-size: .875rem;
+    }
+    .new-sellers-form{
+        width: 100%;
+    }
+    .new-sellers-form input{
+        font-size: .875rem;
+        padding: 8px;
+    }
+    .new-sellers-form button{
+        font-size: .875rem;
+    }
+}
+@media(max-width: 320px){
+    .new-sellers{
+        padding: 5px;
+    }
+
+    .new-sellers h3{
+        font-size: 1rem;
+    }
+    .new-sellers p{
+        font-size: .8125rem;
+    }
+    .new-sellers-form{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .new-sellers-form input{
+        font-size: .875rem;
+        padding: 8px;
+    }
+    .new-sellers-form button{
+        font-size: .875rem;
+    }
+}

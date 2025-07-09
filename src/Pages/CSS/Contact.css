@@ -28,3 +28,22 @@
     margin: auto;
     height: 450px;
 }
+
+@media(max-width:1024px){
+    .contat-header h1{
+        font-size: 1.5rem;
+    }
+    .contact-map{
+        width: 90%;
+    }
+}
+@media(max-width:425px){
+    .contat-header h1{
+        font-size: 1.25rem;
+    }
+    .contact-map{
+        width: 100%;
+        padding: 0px 5px;
+        height: 400px;
+    }
+}

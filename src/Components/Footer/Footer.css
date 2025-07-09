@@ -87,3 +87,93 @@
 .copyright span{
     font-size: 1.5rem;
 }
+
+@media(max-width:768px){
+    .footer{
+    padding: 9px;
+}
+
+.footer-content{
+    gap: 15px;
+}
+
+.footer-content h3{
+   font-size: 1.125rem;
+    font-weight: 500;
+}
+.footer-about{
+    flex-basis: 45%;
+}
+.footer-about p{
+    font-size: .875rem;
+}
+.footer-links ul{
+   gap: 5px;
+   font-size: .875rem;
+}
+.footer-account ul{
+    font-size: .875rem;
+    gap: 5px;
+}
+
+.footer hr{
+    height: 3px;
+}
+
+.footer-copyright{
+    gap: 20px;
+    margin-top: 10px;
+}
+.copyright{
+    font-size: 0.8125rem
+}
+
+.social-icon{
+    font-size: 1.25rem;
+}
+
+.copyright span{
+    font-size: 1rem;
+}
+}
+@media(max-width:425px){
+    .footer{
+    padding: 9px;
+}
+
+.footer-content{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.footer-content h3{
+   font-size: 1.2rem;
+}
+.footer-about{
+    flex-basis: 100%;
+}
+.footer-about p{
+    font-size: .8125rem;
+}
+.footer-links ul{
+   gap: 5px;
+   font-size: .8125rem;
+}
+.footer-account ul{
+    font-size: .875rem;
+    gap: 5px;
+}
+
+.footer hr{
+    height: 3px;
+    width: 100%;
+}
+
+.footer-copyright{
+    gap: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+}

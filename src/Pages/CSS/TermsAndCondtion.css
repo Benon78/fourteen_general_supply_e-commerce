@@ -18,7 +18,7 @@
 }
 
 .terms h4{
-    color:rgb(114, 66, 32);
+    color:rgb(82, 51, 29);
     margin-bottom: 10px;
 
 }
@@ -31,4 +31,57 @@
 .terms ul{
     margin-left: 35px;
     margin-bottom: 20px;
+}
+
+@media(max-width:1024px){
+    .terms-container{
+        padding: 10px 0px;
+    }
+    .terms{
+        width: 85%;
+        margin-bottom: 30px;
+    }
+    .terms p{
+        line-height: 1.5;
+        font-size: .875rem;
+        font-weight: 350;
+    }
+    .terms ul{
+        font-size: .875rem;
+        font-weight: 350;
+    }
+    .terms h2{
+        font-size: 1.75rem;
+    }
+}
+@media(max-width:768px){
+.terms{
+        width: 95%;
+        margin-bottom: 30px;
+    }
+    .terms p{
+        line-height: 1.5;
+        font-size: .8125rem;
+        font-weight: 350;
+    }
+    .terms ul{
+        font-size: .8125rem;
+        font-weight: 350;
+    }
+    .terms h2{
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:375px){
+    .terms h2{
+        font-size: 1.25rem;
+    }
+    .terms p{
+        font-size: .75rem;
+    }
+    .terms ul{
+        font-size: .75rem;
+    }
 }

@@ -33,3 +33,46 @@
     font-weight: 600;
     text-transform: capitalize;
 }
+
+
+@media(max-width: 1024px){
+    .about{
+        gap: 20px;
+    }
+    .about-container{
+        width: 80%;
+    }
+    .about-container p{
+        line-height: 1.5;
+    }
+}
+@media(max-width: 768px){
+    .about{
+        gap: 10px;
+    }
+    .about-container{
+        width: 85%;
+    }
+    .about-container p{
+        line-height: 1.5;
+        font-size: .8125rem;
+    }
+    .about h1{
+        font-size: 1.5rem;
+    }
+}
+@media(max-width: 425px){
+    .about-container{
+        width: 95%;
+    }
+    .about-container p{
+        line-height: 1.5;
+        font-size: .75rem;
+    }
+    .about-container h3{
+        font-size: 1rem;
+    }
+    .about h1{
+        font-size: 1.2rem;
+    }
+}

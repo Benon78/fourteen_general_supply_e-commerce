@@ -5,7 +5,7 @@
 .shiping-content{
     width: 50%;
     margin: 20px auto;
-    height: 20vh;
+    /* height: 20vh; */
 }
 
 .shiping-content h3{
@@ -19,4 +19,29 @@
 .shiping-content p{
     font-weight: 350;
     line-height: 1.5;
+}
+
+@media(max-width:768px){
+    .shiping-content{
+        width: 70%;
+    }
+    .shiping-container h3{
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    .shiping-content p{
+        font-size: .875rem;
+    }
+}
+@media(max-width:425px){
+    .shiping-content{
+        width: 90%;
+    }
+    .shiping-container h3{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .shiping-content p{
+        font-size: .8125rem;
+    }
 }

@@ -82,13 +82,7 @@
     }
 
 }
-@media(max-width:500px){
-     .featured{
-        /* height: 50vh; */
-     }
 
-
-}
 
 @media(max-width:400px){
     .featured-item{

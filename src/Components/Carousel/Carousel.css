@@ -86,6 +86,13 @@
         width: 40px;
         font-size: 1.5rem;
     }
+    .item-carousel .item .item-prices {
+        gap: 7px;
+        
+    }
+    .item-carousel .item .item-price-new{
+        font-size: 14px;
+    }
 }
 
 @media(max-width:800px){

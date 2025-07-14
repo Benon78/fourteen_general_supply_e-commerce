@@ -59,7 +59,7 @@ const NavBar = () => {
         </li>
       </ul>
       <div className="nav-search">
-        <input type="text" placeholder="Search..." />
+        <input type="text" id="search-input" placeholder="Search..." />
         <button>
           <FaSearch />
         </button>

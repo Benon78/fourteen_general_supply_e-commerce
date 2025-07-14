@@ -9,3 +9,20 @@
 .navigate-icon{
     font-size: 1.2rem;
 }
+@media(max-width:768px){
+    .breadcrum{
+        margin: 10px 0;
+        padding: 0px 10px;
+        font-size: .875rem;
+    }
+}
+@media(max-width:425px){
+    .breadcrum{
+        display: none;
+    }
+}
+@media(max-width:320px){
+    .breadcrum{
+        display: none;
+    }
+}

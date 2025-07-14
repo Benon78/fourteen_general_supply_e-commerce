@@ -20,7 +20,7 @@ const ProductDetail = () => {
     productId && setRelatedProduct(getRelatedProduct(productId))
   },[productId])
   return (
-    <div className='product'>
+    <div className='productcontainer'>
       <BreadCrum location={productId}/>
       <ProductDisc product={product}/>
       <RelatedProducts relatedProduct={relatedProduct}/>

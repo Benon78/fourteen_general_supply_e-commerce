@@ -1,8 +1,10 @@
 .product-disc{
+    width: 100%;
     display: flex;
     justify-content: space-around;
     gap: 20px;
     margin-bottom: 30px;
+    padding: 0px 10px;
 }
 
 .product-image{
@@ -18,16 +20,25 @@
 .product-image-smalls img{
     width: 100%;
     cursor: pointer;
+    height: 100%;
+    object-fit: contain;
 }
 .product-image-smalls{
     width: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .product-image-large{
+    padding-top: 10px;
     width: 586px;
 }
 .product-image-large img{
+    object-fit: contain;
     width: 100%;
+    height: 100%;
 }
 
 .product-details{
@@ -91,7 +102,7 @@
 .product-details-content button{
      width: 150px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
     font-size: 1.15rem;
@@ -104,4 +115,89 @@
 .product-details-content button:hover{
     box-shadow: 1px 2px 3px #000;
     background: rgb(222, 163, 121);
+}
+
+@media(max-width:1024px){
+.product-image-smalls{
+    width: 100px;
+}
+.product-disc{
+    gap: 10px;
+}
+.product-image-large{
+    width: 350px;
+}
+.product-details-header h3{
+    font-size: 1.25rem;
+}
+.product-details-content button{
+    font-size: medium;
+    width: 120px;
+    height: 40px;
+}
+.details-content ul{
+    font-size: .9375rem;
+}
+.prices p{
+    font-size: .9375rem;
+}
+.prices span{
+    font-size: 16px;
+}
+}
+
+@media(max-width:768px){
+    .product-disc{
+        flex-direction: column;
+    }
+    .product-image{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-direction: column-reverse;
+        border-radius: 0px;
+    }
+    .product-image-smalls{
+        flex-direction: row;
+        gap: 10px;
+        height: 100px; 
+    }
+    .product-details{
+        border-radius: 0px;
+    }
+    .product-image-large{
+        width: 90%;
+        margin: auto;
+        height: 400px;
+    }
+}
+@media(max-width:425px){
+    .product-disc{
+        padding: 0px;
+    }
+    .product-image-smalls{
+        width: 62px;
+    }
+    .product-image-large{
+        width: 95%;
+    }
+    .product-details-header h3{
+        font-size: 1.125rem;
+    }
+    .details-header-row p{
+        font-size: 0.875rem;
+    }
+    .details-content ul{
+        font-size: .8125rem;
+    }
+}
+@media(max-width:320px){
+     .product-details-header h3{
+        font-size: 1rem;
+    }
+    .details-header-row p{
+        font-size: 0.8125rem;
+    }
+    .details-content ul{
+        font-size: .75rem;
+    }
 }

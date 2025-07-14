@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 60vh;
     width: 90%;
     margin: auto;
 }
@@ -36,9 +35,6 @@
 }
 
 @media(max-width:1280px){
-     .related{
-        height: 70vh;
-     }
 
      .related h1{
         font-size: 40px;
@@ -54,12 +50,9 @@
 
 }
 @media(max-width:1024px){
-     .related{
-        height: 60vh;
-     }
 
      .related h1{
-        font-size: 30px;
+        font-size: 20px;
      }
      .related hr{
         width: 120px;
@@ -74,7 +67,6 @@
 
 @media(max-width:800px){
      .related{
-        height: 50vh;
         gap: 8px;
      }
 
@@ -90,9 +82,6 @@
 
 }
 @media(max-width:500px){
-     .related{
-        height: 90vh;
-     }
 
     .related-item{
         display: grid;

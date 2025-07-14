@@ -1,8 +1,9 @@
-import { Await, Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Await, NavLink, Outlet, useLocation } from "react-router-dom";
 import BreadCrum from "../Components/BreadCrum/BreadCrum";
 import "./CSS/Product.css";
-import { Suspense, useEffect, useMemo, useState } from "react";
-import { MdViewModule, MdViewList } from "react-icons/md";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { MdClose } from "react-icons/md";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import {
   getFilteredProduct,
@@ -17,6 +18,7 @@ const Product = () => {
   const [selected, setSelected] = useState("featured");
   const [showorder, setShowOrder] = useState(false);
   const [showFlex, setShowFlex] = useState(false);
+  const navRef = useRef();
 
   const styled = {
     color: "#FF6A00",
@@ -67,11 +69,15 @@ const Product = () => {
   const handleSelect = (e) => {
     setSelected(e.target.value);
   };
+  const navMenuToggle = () =>{
+    navRef.current.classList.toggle('product-nav-visible')
+  }
   return (
     <div className="product">
       <BreadCrum location={location} />
       <div className="product-container">
-        <div className="product-nav">
+        <div className="product-nav" ref={navRef}>
+          <MdClose className="close-menu" onClick={navMenuToggle}/>
           <h3>Main menu</h3>
           <ul>
             <li>
@@ -204,6 +210,7 @@ const Product = () => {
               </NavLink>
             </li>
           </ul>
+          <button onClick={navMenuToggle}>View results</button>
         </div>
         <div className="product-list">
           <div className="product-category">
@@ -213,7 +220,13 @@ const Product = () => {
                   <>
                     <div className="category-header">
                       <h3>{location}</h3>
+                      <div className="product-count">
+                        {resolvedProducts.length} Products
+                      </div>
                       <div className="category-sort">
+                        <div className="sort-menu">
+                          <AiOutlineMenuUnfold className="menu-icon" onClick={navMenuToggle}/>
+                        </div>
                         <div className="sort-items-count">
                           Showing: {resolvedProducts.length} of{" "}
                           {resolvedProducts.length} products
@@ -222,6 +235,7 @@ const Product = () => {
                           Sort by:{" "}
                           <select
                             className="select"
+                            id="select"
                             value={selected}
                             onChange={handleSelect}
                           >

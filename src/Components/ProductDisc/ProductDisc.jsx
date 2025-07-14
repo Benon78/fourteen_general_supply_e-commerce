@@ -14,6 +14,7 @@ const ProductDisc = (props) => {
   const { description, image, name, newPrice, subImages, id } = props.product;
   const { addToCart, getRecentViewed } = useContext(shopContext);
   const [mainImg, setMainImg] = useState(image);
+  const [smallImages, setSmallImages] = useState(subImages)
 
   const handleClick = (productId) => {
     addToCart(productId);
@@ -22,13 +23,15 @@ const ProductDisc = (props) => {
 
   useEffect(() => {
     setMainImg(image);
-  }, [image]);
+    setSmallImages(subImages)
+  }, [image,subImages]);
   return (
     <div className="product-disc">
       <div className="product-image">
         <div className="product-image-smalls">
-          {subImages && Array.isArray(subImages)
-            ? subImages.map((subImg, i) => (
+        
+          {smallImages && Array.isArray(smallImages)
+            ? smallImages.map((subImg, i) => (
                 <img
                   key={i}
                   src={subImg}
@@ -37,6 +40,7 @@ const ProductDisc = (props) => {
                 />
               ))
             : null}
+       
         </div>
         <div className="product-image-large">
           <img src={mainImg} alt={name} />

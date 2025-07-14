@@ -1,0 +1,14 @@
+.productcontainer{
+    background: #eeecec;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+@media(max-width:425px){
+    .productcontainer{
+        padding-bottom: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+}

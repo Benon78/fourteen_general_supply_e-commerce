@@ -253,6 +253,9 @@
 .nav-logo{
     transform: scale(0.9);
 }
+.nav-links-visible{
+    width: 90%;
+}
 }
 @media(max-width:320px){  
     .navBar{

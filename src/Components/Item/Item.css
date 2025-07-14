@@ -47,7 +47,7 @@
 }
 @media(max-width:1024px){
     .item{
-        width: 170px;
+        width: 150px;
         font-size: 13px;
     }
     .item-prices{

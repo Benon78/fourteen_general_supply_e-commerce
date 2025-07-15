@@ -20,7 +20,7 @@
 .product-image-smalls img{
     width: 100%;
     cursor: pointer;
-    height: 100%;
+    /* height: 100%; */
     object-fit: contain;
 }
 .product-image-smalls{

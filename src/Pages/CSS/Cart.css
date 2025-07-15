@@ -17,3 +17,37 @@
     text-transform: capitalize;
     color: rgb(189, 97, 32);
 }
+
+@media(max-width:1440px){
+    .cart{
+        padding: 20px 0;
+    }
+    .cart-contents{
+        width: 90%;
+    }
+    .cart-contents h1{
+        font-size: 1.8125rem;
+    }
+}
+@media(max-width:1024px){
+    .cart-contents{
+        width: 95%;
+    }
+}
+
+@media(max-width:768px){
+    .cart-contents h1{
+        font-size: 1.375rem;
+    }
+}
+@media(max-width:425px){
+    .cart{
+        padding-top: 10px;
+    }
+    .cart-contents{
+        width: 100%;
+    }
+    .cart-contents h1{
+        text-align: center;
+    }
+}

@@ -262,6 +262,7 @@
 }
 @media(max-width:320px){  
     .navBar{
+        
         padding: 8px;
     }
 .login-cart-btn{

@@ -118,6 +118,7 @@
 @media(max-width:800px){
     .hero-container{
         gap: 10px;
+        height: 60vh;
     }
 .hero-left{
     padding-left: 10px;

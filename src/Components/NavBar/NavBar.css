@@ -193,13 +193,13 @@
 }
 
 }
-@media(max-width:750px){  
+@media(max-width:768px){  
 .nav-search{
-    width: 300px; 
+    width: 350px; 
 }
 
 .login-cart-btn{
-    gap: 40px;
+    gap: 20px;
 }
 
 .login-cart-btn button{
@@ -208,6 +208,9 @@
 }
 .nav-logo{
     transform: scale(0.9);
+}
+.menu-icon{
+    font-size: 1.875rem;
 }
 }
 @media(max-width:650px){  

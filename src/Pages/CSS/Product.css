@@ -243,7 +243,7 @@
 
 @media(max-width:425px){
     .product-category-item{
-        grid-template-columns: repeat(2, minmax(100px,1fr)) ;
+        grid-template-columns: repeat(2, minmax(100px,1fr));
         gap: 10px;
         margin: 10px 0px;
     }

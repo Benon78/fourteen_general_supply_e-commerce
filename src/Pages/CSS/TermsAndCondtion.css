@@ -1,5 +1,5 @@
 .terms-container{
-    background: #eeecec;
+    /* background: #eeecec; */
     box-sizing: border-box;
     padding: 30px 20px;
 }
@@ -10,7 +10,7 @@
 }
 
 .terms h2{
-    color: rgb(114, 66, 32);
+   color: rgb(171, 87, 56);
     margin-bottom: 20px;
     text-transform: capitalize;
     font-size: 2rem;
@@ -18,7 +18,7 @@
 }
 
 .terms h4{
-    color:rgb(82, 51, 29);
+     color: rgb(207, 77, 30);
     margin-bottom: 10px;
 
 }

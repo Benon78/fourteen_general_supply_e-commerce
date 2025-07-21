@@ -251,7 +251,7 @@
         display: block;
     }
     .product-nav button{
-        display: block;
+        display: none;
     }
     .sort-items-count{
         display: none;

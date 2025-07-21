@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
+import { MdClose } from "react-icons/md";
 import { shopContext } from "../Context/ShopContext";
 import { FiMenu } from "react-icons/fi";
 const NavBar = () => {
@@ -36,6 +37,7 @@ const NavBar = () => {
       </div>
       
       <ul className="nav-links" ref={menuRef}>
+        <MdClose className="close-menu-icon" onClick={dropdownToggle}/>
         <li>
           <NavLink to="/" style={({isActive}) => (isActive ? styled : null)}>
             HOME

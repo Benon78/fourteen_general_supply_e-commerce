@@ -38,7 +38,7 @@ function CartTotalItem() {
       </div>
       <div className="checkout-container">
         <p>
-          Tax included. <Link to="/shipping-policy">Shipping</Link> calculated at
+          Tax included. <Link to="/shiping-policy">Shipping</Link> calculated at
           checkout
         </p>
         <button>Checkout</button>

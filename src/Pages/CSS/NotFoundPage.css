@@ -25,7 +25,7 @@
 }
 
 .search-page-input{
-    width: 30%;
+    width: 40%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -62,4 +62,29 @@
 .content a:hover{
     color: #383737;
     text-decoration: underline;
+}
+
+@media(max-width:1024px){
+    .search-page-input{
+        width: 50%;
+    }
+}
+@media(max-width:768px){
+    .not-found-page-container .content{
+        margin: 80px 0;
+    }
+    .search-page-input{
+        width: 50%;
+    }
+}
+@media(max-width:425px){
+    .not-found-page-container .content{
+        margin: 20px 0;
+    }
+    .search-page-input{
+        width: 100%;
+    }
+    .content p{
+        text-align: center;
+    }
 }
